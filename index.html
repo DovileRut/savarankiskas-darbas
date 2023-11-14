@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header class="intro block-wrapper">
+        <div class="antraste">
+            <h1>Audinių parduotuvė "Audinukas"</h1>
+            <p>Čia galite įsigyti audinių patraukliomis kainomis!</p>
+        </div>
+    </header>
+    <div id="pradinis">
+        <div class="block-wrapper">
+            <h2>Sveiki atvykę į mūsų parduotuvę!</h2>
+            <p>Mūsų parduotuvėje vieno rulono kvadratinio metro kaina yra <strong>8 eur</strong>. 
+            <p><strong>Šiuo metu taikome nuolaida: </strong>perkant 5 kv.m. ar daugiau taikome 5% nuolaidą rulonui!</p></p>
+            <p>Be to, pas mus galima pirkti metro dalimis (kas 0,1 m), tad galite nusipirkti tiek audinio, kiek reikia.</p>
+        </div>
+        <div class="info-wrapper block-wrapper">
+            <h2>Pasirinkite audinio savybes:</h2>
+            <div class="parametras">
+                <label for="length-count">Ilgis (m):</label>
+                <input type="number" min="0" step="0.1" value="0" id="length-count">
+                <span class="error">Audinio ilgis negali būti neigiamas</span>
+            </div>
+            <div class="parametras">
+                <label for="width-count">Plotis (m):</label>
+                <input type="number" min="0" step="0.1" value="0" id="width-count">
+                <span class="error">Audinio plotis negali būti neigiamas</span>            
+            </div>
+            <div class="parametras">
+                <label for="cloth-count">Rulonų kiekis:</label>
+                <input type="number" min="0" step="1" value="0" id="cloth-count">
+                <span class="error">Rulonų kiekis negali būti neigiamas</span>            
+            </div>
+            <div class="parametras">
+                <label for="cloth-colour">Audinio spalva:</label>
+                <select id="cloth-colour">
+                    <option value="Juoda">Juoda</option>
+                    <option value="Rusva">Rusva</option>
+                    <option value="Pilka">Pilka</option>
+                    <option value="Žalia">Žalia</option>
+                    <option value="Geltona">Geltona</option>
+                </select>
+            </div>
+            <div class="parametras">
+                <label for="cloth-design">Audinio dizainas:</label>
+                <select id="cloth-design">
+                    <option data-price="0" value="Be dizaino">Be dizaino</option>
+                    <option data-price="3" value="Taškuotas">Taškuotas (+3 eur už 1 rul.)</option>
+                    <option data-price="5" value="Dryžuotas">Dryžuotas (+5 eur už 1 rul.)</option>
+                </select>
+            </div>
+            <button id="calculate">Skaičiuoti</button>
+            <button id="reset">Iš naujo</button>
+        </div>
+    </div>
+    <div class="info-wrapper block-wrapper">
+        <h2>Jūsų užsakymas</h2>
+        <div id="results">
+            <p>Kol kas nieko nėra, įveskite informaciją, kad sužinotumėte kainą.</p>
+        </div>
+    </div> 
+</body>
+</html>
